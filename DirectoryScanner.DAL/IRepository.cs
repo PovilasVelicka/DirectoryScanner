@@ -10,6 +10,10 @@ namespace DirectoryScanner.DAL
     {
         void SaveChanges();
         Models.DB.Folder? GetFolder(string folderName);
-        void Update(DAL.Models.DB.Folder folder);
+        void AddOrUpdate(DAL.Models.DB.Folder folder);
+
+        IEnumerable<DAL.Models.DB.Folder> GetAllInRoot(string rootFolder);
+        void Remove(IEnumerable<DAL.Models.DB.File> files);
+        void Remove(IEnumerable<DAL.Models.DB.Folder> folders);
     }
 }

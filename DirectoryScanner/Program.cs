@@ -1,5 +1,6 @@
 ﻿using DirectoryScanner.BLL;
 
-var scan = new Scanner();
-scan.ScanDirectory(@"C:\Users\povvel\Documents\SQL Server Management Studio\CramoAppLT-PROJECTS\GinHubRepository\CREDITS");
-scan.SaveChanges();
+var scaner = new Scanner();
+// scaner.ScanDirectory(@"C:\Users\povvel\Documents\SQL Server Management Studio\CramoAppLT-PROJECTS\GinHubRepository\CREDITS");
+scaner.UpdateDirectoryList(@"C:\Program Files (x86)");
+
