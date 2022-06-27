@@ -13,7 +13,6 @@ namespace DirectoryScanner.DAL
 
         public void SaveChanges()
         {
-            
             _context.SaveChanges();
         }
 

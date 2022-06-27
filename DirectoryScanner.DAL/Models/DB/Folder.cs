@@ -7,6 +7,7 @@ using Microsoft.EntityFrameworkCore;
 namespace DirectoryScanner.DAL.Models.DB
 {
     [Table("Folders", Schema = "Computer")]
+    [Index("Name", Name = "IX_FoldersName")]
     public partial class Folder
     {
         public Folder()

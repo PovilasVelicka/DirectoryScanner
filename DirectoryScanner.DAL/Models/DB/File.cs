@@ -7,13 +7,13 @@ using Microsoft.EntityFrameworkCore;
 namespace DirectoryScanner.DAL.Models.DB
 {
     [Table("Files", Schema = "Computer")]
+    [Index("FolderId", Name = "IX_FilesFolderId")]
     public partial class File
     {
         [Key]
         public Guid Id { get; set; }
-        [StringLength(100)]
+        [StringLength(255)]
         public string Name { get; set; } = null!;
-        [StringLength(500)]
         public string FullDirectory { get; set; } = null!;
         public long Size { get; set; }
         public Guid FolderId { get; set; }

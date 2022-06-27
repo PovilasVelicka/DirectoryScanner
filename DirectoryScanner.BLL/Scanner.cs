@@ -1,4 +1,5 @@
 ﻿using DirectoryScanner.DAL;
+
 namespace DirectoryScanner.BLL
 {
     public class Scanner
@@ -37,6 +38,7 @@ namespace DirectoryScanner.BLL
 
                 _repository.Remove(folder.Files.Where(f => !f.Exists));
                 _repository.AddOrUpdate(folder);
+                _repository.SaveChanges();
             }
             catch (UnauthorizedAccessException) { }
             catch (Exception) { throw; }
